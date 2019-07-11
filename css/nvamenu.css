@@ -1,0 +1,215 @@
+
+a{
+    text-decoration: none;
+    color: #383f47;
+    font-size: 16px;
+}
+.iconfont{
+    font-size: 13px;
+    margin-right: 5px;
+    vertical-align: top;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+.navmenu-box{
+    background: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    height: 35px;
+}
+.horizontal .itemlist{
+    float: left;
+    position: relative;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.horizontal .itemlist-submenu{
+    position: relative;
+    float: left;
+}
+.horizontal .itemlist-submenu-title{
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.horizontal .itemlist-select-dropdown{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    display: none;
+}
+.horizontal .secNavMenu{
+    position: absolute;
+    width: 100%;
+    border: 1px solid #d0d7dd;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+.horizontal .itemlist-active{
+    border-bottom: 2px solid #2d8cf0;
+    color: #2d8cf0;
+}
+.horizontal .itemlist-active .icon-jiantouarrow483{
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);		/* IE 9 */
+    -webkit-transform: rotate(180deg);	/* Safari and Chrome */
+    -o-transform: rotate(180deg);		/* Opera */
+    -moz-transform: rotate(180deg);
+}
+.horizontal .itemlist-active>.secNavMenu li{
+    color: #383f47;
+}
+.horizontal .navmenu .itemlist-select{
+    border-bottom: 2px solid #2d8cf0;
+    color: #2d8cf0;
+}
+.horizontal .icon-jiantouarrow483{
+    margin-right: 0;
+    margin-left: 5px;
+    transition: 0.4s;
+}
+.horizontal  .itemlist-select>.secNavMenu li{
+    color: #383f47;
+}
+/* 主题一 */
+.them1{
+    background: #515a6e;
+}
+.them1 .navmenu .itemlist{
+    color: #bbbbbb;
+}
+.them1 .navmenu .itemlist-active{
+    color: #ffffff;
+    border-bottom: none;
+}
+.them1 .navmenu .itemlist-active .itemlist-submenu-title{
+    color: #ffffff;
+}
+.them1 .navmenu .itemlist-select{
+    color: #ffffff;
+    border-bottom: none;
+}
+.them1 .navmenu .itemlist-select .itemlist-submenu-title{
+    color: #ffffff;
+}
+.them1 .itemlist-submenu-title{
+    color: #bbbbbb;
+}
+.them1 .itemlist-submenu .itemlist-submenu-title{
+    color: #bbbbbb;
+}
+.them2{
+    background: #237ae4;
+}
+.them2 .navmenu .itemlist{
+    color: #dddddd;
+}
+.them2 .navmenu .itemlist-active{
+    color: #ffffff;
+    border-bottom: none;
+}
+.them2 .navmenu .itemlist-active .itemlist-submenu-title{
+    color: #ffffff;
+}
+.them2 .navmenu .itemlist-select{
+    color: #ffffff;
+    border-bottom: none;
+}
+.them2 .itemlist-submenu-title{
+    color: #dddddd;
+}
+/* 主题二 */
+.horizontal .secNavMenu li{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: #383f47;
+    cursor: pointer;
+}
+.horizontal .secNavMenu li:hover{
+    background: #eeeeee;
+}
+.horizontal .menu-right{
+    float: right;
+}
+.horizontal .menu-right{
+    font-size: 14px;
+}
+.horizontal .menu-left{
+    float: left;
+}
+/* 垂直侧边菜单 */
+.vertical{
+    border-bottom: none;
+    width: 200px;
+    height: auto;
+    border-right: 1px solid #d0d7dd;
+    background-color: #393D49
+}
+.vertical .vertical-itemlist{
+    padding: 0 15px;
+    cursor: pointer;
+    line-height: 35px;
+    color: #bbbbbb;
+}
+.vertical .vertical-itemlist-submenu{
+    cursor: pointer;
+    line-height: 35px;
+    position: relative;
+    color: #bbbbbb;
+}
+.vertical .itemlist-submenu-title{
+    padding: 0 15px;
+}
+.vertical .itemlist-active{
+    border:none;
+    color: #ffffff;
+    background: rgb(76, 82, 99);
+}
+.vertical .itemlist-active .itemlist-submenu-title{
+    color: #ffffff;
+}
+.vertical .itemlist-select .icon-jiantouarrow483{
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);		/* IE 9 */
+    -webkit-transform: rotate(180deg);	/* Safari and Chrome */
+    -o-transform: rotate(180deg);		/* Opera */
+    -moz-transform: rotate(180deg);
+}
+.vertical .itemlist-active>.secNavMenu li{
+    color: #383f47;
+}
+.vertical .itemlist-select{
+    color: #ffffff;
+    border: none;
+}
+.vertical .icon-jiantouarrow483{
+    margin-right: 0;
+    margin-left: 5px;
+    transition: 0.2s;
+    position: absolute;
+    right: 13px;
+}
+.vertical .itemlist-select>.secNavMenu li{
+    color: #383f47;
+}
+
+.vertical .itemlist-select-dropdown{
+    display: none;
+}
+.vertical .itemlist-select-dropdown li{
+    padding-left: 30px;
+}
+@media screen and (max-width:900px){
+    .menu-right{display: none;}
+}

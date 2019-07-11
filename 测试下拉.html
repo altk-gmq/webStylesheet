@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	    <link rel="stylesheet" href="font/iconfont.css">
+	    <style type="text/css">
+	    	.selector{
+	    		display: none;
+	    	}
+	    </style>
+</head>
+<body>
+<select name="cityname" class="selector">
+	<option value="">请选择</option>
+	<option value="0">上海</option>
+	<option value="1">北京</option>
+	<option value="2">南京</option>
+	<option value="3">海南</option>
+</select>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript">
+      	$(function(){
+            var selectbox = "<div class='bdtd-selectbox  bdtd-sizeBig'><div class='bdtd-selectInput'><input type='text' name='cityname' class='bdtd-input selectbtn' readonly='readonly' placeholder='请选择'value=''><button class='iconfont icon-xiasanjiao1 input-edge'></button></div><ul class='bdtd-selectMenu'></ul></div>"
+            $("select").after(selectbox);
+      		var csd = new Array();
+      		var arr = new Array();
+        // alert($(".selector").get(0))
+      		$(".selector").find("option").each(function(){
+      			var $option = $(this);
+      			var optionV = $option.val();
+      			var optionT = $option.text();
+      			arr.push(optionT);
+      			csd.push(optionV);
+      		});
+           var olist = $(".bdtd-selectMenu");
+           var uli = "";
+           for(i=0;i<arr.length;i++){
+           	var bd_value = i-1;
+           	if(bd_value<0){
+           		bd_value ='';
+           	}
+           	uli += "<li class='bdtd-menu-item' bd-value="+(bd_value)+" >"+arr[i]+"</li>"
+           }
+           olist.html(uli);
+            $(".bdtd-selectInput").click(function(event){
+                event.preventDefault()
+                // 获取input文本值
+                var oldValue = $(this).children(".selectbtn").attr('value');
+
+                //增加类openlist 
+                $(this).toggleClass("openlist");
+
+                // 判断下列列表是否展开
+                var isshow = $(this).next(".bdtd-selectMenu").css('display');
+                if(isshow == 'none'){
+                   $(this).next(".bdtd-selectMenu").slideDown(100);
+                }else{
+                   $(this).next(".bdtd-selectMenu").slideUp(50)
+                };
+
+                $(this).next(".bdtd-selectMenu").children(".bdtd-menu-item").mousedown(function(event){
+                    // 取消默认点击事件
+                    event.preventDefault()
+                    // 获取当前点击的li文本值
+                    var thisValue = $(this).text();
+                    var thisAttr = $(this).attr("bd-value");
+                    // alert(thisAttr);
+                    for(i=1 ;i<csd.length;i++){
+                    	if(thisAttr == ""){
+                    		$(this).parent(".bdtd-selectMenu").prev().children(".selectbtn").attr('value','');
+                    		$(this).parents(".bdtd-selectbox").prev(".selector").find("option:first").attr("selected",true).siblings().attr("selected",false);
+                    	}
+                    	if(thisAttr == csd[i]){
+                			$(this).parent(".bdtd-selectMenu").prev().children(".selectbtn").attr('value',thisValue);
+                    	    $(".selector").find("option[value="+thisAttr+"]").attr("selected",true).siblings().attr("selected",false);
+                    	}
+                    }
+                    $(this).parent(".bdtd-selectMenu").slideUp(50);
+                    // 去掉类openlist
+                    $(this).parent(".bdtd-selectMenu").prev().removeClass('openlist');
+                    $(this).parent(".bdtd-selectMenu").prev().children(".selectbtn").blur()
+                });
+                $(".input-edge").blur(function(){
+                    $(this).parent(".bdtd-selectInput").removeClass('openlist');
+                    $(this).parent(".bdtd-selectInput").next(".bdtd-selectMenu").slideUp(50);
+                });
+                //点击空白区域闭合
+                $(".selectbtn").blur(function(){
+                    $(this).parent(".bdtd-selectInput").next(".bdtd-selectMenu").slideUp(50);
+                    $(this).parent(".bdtd-selectInput").removeClass('openlist');
+                });
+
+            });
+      	})
+      </script>
+</body>
+</html>

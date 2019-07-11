@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>max-width,min-width,max-height,min-height等值无效</title>
+</head>
+<body>
+<h2>max-width、min-width、max-height、min-height等属性无效</h2>
+<p>浏览器环境：ie6</p>
+<ul style="border: 1px solid #777;min-width:980px;_width:expression(documentElement.clientWidth < 980 ? '980px' : 'auto')">
+<li>max-width:1280px;</li>
+<li>min-width:980px;</li>
+<li>max-height:800px;</li>
+<li>min-height:600px;</li>
+<li>
+	这几个最常用的数量虽然不多，但是够用而且很管用；但是我们的遵循原则是能不用就不用
+</li>
+</ul>
+<p>最大最小宽高属性在网页需要它出现时并没有给面子，问题原因是ie6不支持；解决办法是使用expression来实时获取元素当前适合宽高</p>
+<p>max-width:1280px;_width:expression(documentElement.clientWidth > 1280 ? "1280px" : "auto");<br>
+min-width:980px;_width:expression(documentElement.clientWidth < 980 ? "980px" : "auto");<br>
+min-height:800px;_height:expression((documentElement.clientHeight || document.body.clientHeight) > 800 ? "800px" : "");<br>
+min-height:600px;_height:expression((documentElement.clientHeight || document.body.clientHeight) < 600 ? "600px" : "");
+</p>
+
+</body>
+</html>

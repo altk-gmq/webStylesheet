@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>fixed值无效</title>
+</head>
+<body>
+	<h2>fixed值无效</h2>
+	<p>浏览器环境：ie6</p>
+    <div style="width: 200px ;height: 500px;background: #666;position:fixed;_position:absolute;top:100px;_top:expression(documentElement.scrollTop + 100 + 'px';);left:100px;"></div>
+    <p>预想中的悬挂效果并没有出现，原因很简单ie6根本不支持；我们的解决办法是改变元素的悬挂为定位并使用expression来实时处理元素当前显示位置</p>
+    <p>position:fixed;_position:absolute;top:100px;_top:expression(documentElement.scrollTop + 100 + "px");left:10px;</p>
+
+    <br>
+    <br>
+    <br>
+    <h2>定位元素上下或左右属性同时赋值时无效</h2>
+    <p>浏览器环境：ie6</p>
+    <p>position:absolute;top:0;bottom:0;left:0;right:0;</p>
+    <p>画布实际表现为并没有按预想的全屏伸展开，问题产生原因是ie6下上下或左右定位属性同时存在时只识别上与左；为元素赋于宽高属性即可</p>
+    <p>width:100%;height:100%;position:absolute;top:0;left:0;</p>
+    <p>问题到此并没有得到完全解决，事实上，很多情况下，我们所希望的定位元素的宽高并非正好为100%</p>
+    <p>position:absolute;top:30px;bottom:50px;left:20px;right:20px;</p>
+    <p>var w = $(window).width() - 40;
+var h = $(window).height() - 80;
+$('#object').css({'width':w,'height':h});</p>
+</body>
+</html>

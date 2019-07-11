@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栅格布局</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <style>
+        .wrapper{
+            padding: 10px 40px;
+        }
+        .wrap-title h3{
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .wrap-body-title{
+            margin-bottom: 8px;
+        }
+        .wrap-body-content{
+            border:1px solid #d0d7dd;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .wrap-body-content button{
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item{
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item p{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+          .wrap-body{
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item .bdtd-row{
+              margin-bottom: 10px;
+        }
+        .bdtd-row .bdtd-cont{
+          padding: 15px;
+          text-align: center;
+          color: #ffffff;
+          background: #409eff;
+        }
+       .bdtd-row .bdtd-cont1{
+          padding: 15px;
+          text-align: center;
+          color: #ffffff;
+          background: #378ce2;
+      }
+
+    
+    </style>
+</head>
+<body>
+     <div class="wrapper">
+       <div class="wrap-content">
+           <div class="wrap-title">
+               <h3>栅格布局</h3>
+           </div>
+           <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       示例及代码
+                       <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">为了丰富网页布局，简化 HTML/CSS 代码的耦合，并提升多终端的适配能力，引进一套具备响应式能力的栅格系统。我们将容器进行了 12 等分，预设了 4*12 种 CSS 排列类，目前只考虑pc端
+</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>一、栅格布局规则：</p>
+                             <table class="bdtd-table bdtd-table-all">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 80px;">1</td><td>采用 bdtd-row 来定义行，如：&lt;div class="bdtd-row"&gt;</div></td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td><td>采用类似 bdtd-col-md* 这样的预设类来定义一组列（column），且放在行（row）内。其中：<br>
+                                                    变量md 代表的是不同屏幕下的标记（可选值见下文）<br>
+                                                    变量* 代表的是该列所占用的12等分数（如6/12），可选值为 1 - 12<br>
+                                                    如果多个列的“等分数值”总和等于12，则刚好满行排列。如果大于12，多余的列将自动另起一行。</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td><td>可对列追加类似 bdtd-col-space5、 bdtd-col-md-offset3 这样的预设类来定义列的间距和偏移。</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p style="margin: 8px;">1,常规排列</p>
+                               <div class="bdtd-row">
+                                <div class="bdtd-col-md1"><div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div><div class="bdtd-col-md1"><div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont">1/12</div></div>
+                              </div>
+                              <div class="bdtd-row">
+                                <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+                              </div>
+                               <div class="bdtd-row">
+                                <div class="bdtd-col-md3"><div class="bdtd-cont">3/12</div></div><div class="bdtd-col-md3"><div class="bdtd-cont1">3/12</div></div><div class="bdtd-col-md3"><div class="bdtd-cont">3/12</div></div><div class="bdtd-col-md3"><div class="bdtd-cont1">3/12</div></div>
+                              </div>
+                              <div class="bdtd-row">
+                                <div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div><div class="bdtd-col-md4"><div class="bdtd-cont1">4/12</div></div><div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div>
+                              </div>
+                              <div class="bdtd-row">
+                                <div class="bdtd-col-md6"><div class="bdtd-cont">6/12</div></div><div class="bdtd-col-md6"><div class="bdtd-cont1">6/12</div></div>
+                              </div>
+                               <div class="bdtd-row">
+                                <div class="bdtd-col-md1"><div class="bdtd-cont">1/11</div></div><div class="bdtd-col-md11"><div class="bdtd-cont1">1/11</div></div>
+                              </div>
+                              <div class="bdtd-row">
+                                <div class="bdtd-col-md2"><div class="bdtd-cont">2/11</div></div><div class="bdtd-col-md10"><div class="bdtd-cont1">10/12</div></div>
+                              </div>
+                               <div class="bdtd-row">
+                                <div class="bdtd-col-md3"><div class="bdtd-cont">3/11</div></div><div class="bdtd-col-md9"><div class="bdtd-cont1">9/12</div></div>
+                              </div>
+                              <div class="bdtd-row">
+                                <div class="bdtd-col-md4"><div class="bdtd-cont">4/11</div></div><div class="bdtd-col-md8"><div class="bdtd-cont1">8/12</div></div>
+                              </div>
+                              <div class="bdtd-row">
+                                <div class="bdtd-col-md5"><div class="bdtd-cont">5/11</div></div><div class="bdtd-col-md7"><div class="bdtd-cont1">7/12</div></div>
+                              </div>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-row">
+          <div class="bdtd-col-md1"><div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div>
+          <div class="bdtd-col-md1"><div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div>
+          <div class="bdtd-col-md1"><div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div>
+          <div class="bdtd-col-md1"><div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"><div class="bdtd-cont1">1/12</div></div>
+          <div class="bdtd-col-md1"><div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont1">1/12</div></div>
+          <div class="bdtd-col-md1"><div class="bdtd-cont">1/12</div></div><div class="bdtd-col-md1"> <div class="bdtd-cont">1/12</div></div>
+        </div>
+        <div class="bdtd-row">
+          <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+          <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+          <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+        </div>
+         <div class="bdtd-row">
+          <div class="bdtd-col-md3"><div class="bdtd-cont">3/12</div></div><div class="bdtd-col-md3"><div class="bdtd-cont1">3/12</div></div>
+          <div class="bdtd-col-md3"><div class="bdtd-cont">3/12</div></div><div class="bdtd-col-md3"><div class="bdtd-cont1">3/12</div></div>
+        </div>
+        <div class="bdtd-row">
+          <div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div><div class="bdtd-col-md4"><div class="bdtd-cont1">4/12</div></div>
+          <div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div>
+        </div>
+        <div class="bdtd-row">
+          <div class="bdtd-col-md6"><div class="bdtd-cont">6/12</div></div><div class="bdtd-col-md6"><div class="bdtd-cont1">6/12</div></div>
+        </div>
+         <div class="bdtd-row">
+          <div class="bdtd-col-md1"><div class="bdtd-cont">1/11</div></div><div class="bdtd-col-md11"><div class="bdtd-cont1">1/11</div></div>
+        </div>
+        <div class="bdtd-row">
+          <div class="bdtd-col-md2"><div class="bdtd-cont">2/11</div></div><div class="bdtd-col-md10"><div class="bdtd-cont1">10/12</div></div>
+        </div>
+         <div class="bdtd-row">
+          <div class="bdtd-col-md3"><div class="bdtd-cont">3/11</div></div><div class="bdtd-col-md9"><div class="bdtd-cont1">9/12</div></div>
+        </div>
+        <div class="bdtd-row">
+          <div class="bdtd-col-md4"><div class="bdtd-cont">4/11</div></div><div class="bdtd-col-md8"><div class="bdtd-cont1">8/12</div></div>
+        </div>
+        <div class="bdtd-row">
+          <div class="bdtd-col-md5"><div class="bdtd-cont">5/11</div></div><div class="bdtd-col-md7"><div class="bdtd-cont1">7/12</div></div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <p style="margin: 8px;">2,列间隔</p>
+                            <div class="bdtd-row bdtd-col-space5">
+                              <div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div><div class="bdtd-col-md4"><div class="bdtd-cont1">4/12</div></div><div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div>
+                            </div>
+                            <div class="bdtd-row bdtd-col-space10">
+                              <div class="bdtd-col-md6"><div class="bdtd-cont">6/12</div></div><div class="bdtd-col-md6"><div class="bdtd-cont1">6/12</div></div>
+                            </div>
+                             <div class="bdtd-row bdtd-col-space15">
+                              <div class="bdtd-col-md1"><div class="bdtd-cont">1/11</div></div><div class="bdtd-col-md11"><div class="bdtd-cont1">1/11</div></div>
+                            </div>
+                            <div class="bdtd-row  bdtd-col-space30">
+                              <div class="bdtd-col-md2"><div class="bdtd-cont">2/11</div></div><div class="bdtd-col-md10"><div class="bdtd-cont1">10/12</div></div>
+                            </div>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-row bdtd-col-space5">
+          <div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div><div class="bdtd-col-md4"><div class="bdtd-cont1">4/12</div></div>
+          <div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div>
+        </div>
+        <div class="bdtd-row bdtd-col-space10">
+          <div class="bdtd-col-md6"><div class="bdtd-cont">6/12</div></div><div class="bdtd-col-md6"><div class="bdtd-cont1">6/12</div></div>
+        </div>
+         <div class="bdtd-row bdtd-col-space15">
+          <div class="bdtd-col-md1"><div class="bdtd-cont">1/11</div></div><div class="bdtd-col-md11"><div class="bdtd-cont1">1/11</div></div>
+        </div>
+        <div class="bdtd-row  bdtd-col-space30">
+          <div class="bdtd-col-md2"><div class="bdtd-cont">2/11</div></div><div class="bdtd-col-md10"><div class="bdtd-cont1">10/12</div></div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <p style="margin: 8px;">3,列偏移</p>
+                            <div class="bdtd-row">
+                              <div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div><div class="bdtd-col-md4  bdtd-col-md-offset4"><div class="bdtd-cont1">偏移4列</div></div>
+                             <div class="bdtd-col-md1 bdtd-col-md-offset5"><div class="bdtd-cont">偏移5列</div></div><div class="bdtd-col-md1"><div class="bdtd-cont1">不偏移</div></div>
+                            </div>
+                             <div class="bdtd-row">
+                              <div class="bdtd-col-md3 bdtd-col-md-offset3"><div class="bdtd-cont">偏移3列</div></div><div class="bdtd-col-md1 bdtd-col-md-offset1"><div class="bdtd-cont1">1/11</div></div>
+                            </div>
+                            <div class="bdtd-row">
+                              <div class="bdtd-col-md2"><div class="bdtd-cont">2/11</div></div><div class="bdtd-col-md10"><div class="bdtd-cont1">10/12</div></div>
+                            </div>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-row">
+          <div class="bdtd-col-md4"><div class="bdtd-cont">4/12</div></div><div class="bdtd-col-md4  bdtd-col-md-offset4">
+            <div class="bdtd-cont1">偏移4列</div></div><div class="bdtd-col-md1 bdtd-col-md-offset5"><div class="bdtd-cont">偏移5列</div>
+          </div><div class="bdtd-col-md1"><div class="bdtd-cont1">不偏移</div></div>
+        </div>
+         <div class="bdtd-row">
+          <div class="bdtd-col-md3 bdtd-col-md-offset3"><div class="bdtd-cont">偏移3列</div></div><div class="bdtd-col-md1 bdtd-col-md-offset1">
+            <div class="bdtd-cont1">1/11</div></div>
+        </div>
+        <div class="bdtd-row">
+          <div class="bdtd-col-md2"><div class="bdtd-cont">2/11</div></div><div class="bdtd-col-md10"><div class="bdtd-cont1">10/12</div></div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+     </div>
+      <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       容器容器（宽度固定）
+                       <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">将栅格放入一个带有 class="bdtd-container" 的特定的容器中，以便在小屏幕以上的设备中固定宽度，让列可控。</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>一、容器布局规则：</p>
+                             <table class="bdtd-table bdtd-table-all">
+                              <thead>
+                                <tr>
+                                  <th>屏幕宽度</th><th>container值</th>
+                                </tr>
+                              </thead>
+                                <tbody>
+                                    <tr>
+                                      <td>>1200</td><td>1170</td>
+                                    </tr>
+                                    <tr>
+                                      <td>992 &lt;x&lt;1200</td><td>970</td>
+                                    </tr>
+                                    <tr>
+                                      <td>768&lt;x&lt;992</td><td>750</td>
+                                    </tr>
+                                    <tr>
+                                      <td>&lt;768</td><td>auto</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p style="margin: 8px;"></p>
+                            <div class="bdtd-container">
+                              <div class="bdtd-row">
+                                <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+                              </div>
+                            </div>
+                            
+                            
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-container">
+          <div class="bdtd-row">
+            <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+            <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+            <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+          </div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+<div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       流体容器（宽度自适应，不固定）
+                       <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">将栅格或其它元素放入一个带有 class="bdtd-fluid" 的容器中，那么宽度将不会固定，而是 100% 适应</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>一、流体布局</p>
+                            <div class="bdtd-fluid">
+                              <div class="bdtd-row">
+                                <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+                                <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+                                <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+                              </div>
+                            </div>
+                            
+                            
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-fluid">
+          <div class="bdtd-row">
+            <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+            <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+            <div class="bdtd-col-md2"><div class="bdtd-cont">2/12</div></div><div class="bdtd-col-md2"><div class="bdtd-cont1">2/12</div></div>
+          </div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

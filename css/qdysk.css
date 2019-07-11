@@ -1,0 +1,71 @@
+.header{
+	height: 60px;
+	line-height: 60px;
+	padding-left: 20px;
+	border-bottom: 1px solid #cccccc;
+	box-shadow: 0 2px 4px #dddddd;
+}
+.header img{
+	vertical-align: text-bottom;
+}
+/*左侧菜单*/
+.leftMenu{
+    position: fixed;
+    top: 75px;
+    left: 100px;
+    bottom: 0;
+    overflow-y: auto;
+    width: 220px;
+    border-right: 1px solid #cccccc;
+}
+.leftMenu h3{
+	height: 30px;
+	line-height: 30px;
+	padding-left: 15px;
+	font-size: 16px;
+}
+.leftMenu .menuList{
+	padding-left: 15px;
+}
+.menuList .menuList-title p{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+.menuList ul{
+	list-style: none;
+	padding-left: 20px;
+}
+.menuList ul li{
+	height:50px;
+	line-height: 50px;
+}
+.menuList ul li a:hover{
+    color: #409eff
+}
+.menuList ul li:first-child{
+	padding: 5px 0;
+	font-weight: bold;
+}
+.menuList ul li:not(:first-child){
+	padding-left: 20px;
+}
+/*右侧内容*/
+.rightContent{
+    position: absolute;
+    left: 350px;
+    right: 0px;
+    top: 60px;
+    bottom: 0;
+    padding: 15px 20px 15px 0;
+}
+.rightContent iframe{
+	border: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}

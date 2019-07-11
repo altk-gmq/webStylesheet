@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page 分页</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <style>
+        .wrapper{
+            padding: 10px 40px;
+        }
+        .wrap-title h3{
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .wrap-body-title{
+            margin-bottom: 8px;
+        }
+        .wrap-body-content{
+            border:1px solid #d0d7dd;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .wrap-body-content button{
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item{
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item p{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+          .wrap-body{
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+     <div class="wrapper">
+       <div class="wrap-content">
+           <div class="wrap-title">
+               <h3>page 分页</h3>
+           </div>
+           <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       示例及代码
+                      <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">用法:只需在span元素中添加类样式即可</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>简约样式</p>
+                            <div class="bdtd-page">
+                                <span class="disabled">首页</span>
+                                <span class="disabled">上一页</span>
+                                <span class="current">1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>下一页</span>
+                                <span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page blue">
+                                <span class="disabled">首页</span>
+                                <span class="disabled">上一页</span>
+                                <span>1</span>
+                                <span class="current">2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>下一页</span>
+                                <span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page org">
+                                <span class="disabled">首页</span>
+                                <span class="disabled">上一页</span>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span class="current">4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>下一页</span>
+                                <span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page red">
+                                <span class="disabled">首页</span>
+                                <span class="disabled">上一页</span>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span class="current">6</span>
+                                <span>下一页</span>
+                                <span>尾页</span>
+                            </div>
+                            <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>组合</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>默认</td>
+                                        <td>class="bdtd-page"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>蓝色</td>
+                                        <td>class="bdtd-page blue"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>橘色</td>
+                                        <td>class="bdtd-page org"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>红色</td>
+                                        <td>class="bdtd-page red"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                                <div class="bdtd-collapse-item">
+                                    <div class="bdtd-collapse-title">
+                                        <i class="iconfont icon-jiantouarrow487"></i>
+                                        显示代码
+                                    </div>
+                                    <div class="bdtd-collapse-content">
+                                        <div class="bdtd-collapse-content-box">
+<pre>
+<xmp style="font-size:18px;color:#545558">
+    <div class="bdtd-page">
+        <span class="disabled">首页</span>
+        <span class="disabled">上一页</span>
+        <span class="current">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>下一页</span>
+        <span>尾页</span>
+    </div>
+</xmp>
+</pre>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>基础样式</p>
+                            <div class="bdtd-page-rapid">
+                <span class="disabled">首页</span><span>上一页</span><span>1</span><span>2</span><span  class="current">3</span><span>4</span><span>5</span><span>6</span><span>下一页</span><span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page-rapid green">
+                <span class="disabled">首页</span><span>上一页</span><span>1</span><span>2</span><span>3</span><span class="current">4</span><span>5</span><span>6</span><span>下一页</span><span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page-rapid org">
+                <span class="disabled">首页</span><span>上一页</span><span>1</span><span>2</span><span>3</span><span>4</span><span class="current">5</span><span>6</span><span>下一页</span><span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page-rapid red">
+                <span class="disabled">首页</span><span>上一页</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span class="current">6</span><span>下一页</span><span>尾页</span>
+                            </div>
+                            <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>组合</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>默认</td>
+                                        <td>class="bdtd-page-rapid"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>绿色</td>
+                                        <td>class="bdtd-page-rapid green"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>橙色</td>
+                                        <td>class="bdtd-page-rapid org"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>红色</td>
+                                        <td>class="bdtd-page-rapid red"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                                <div class="bdtd-collapse-item">
+                                    <div class="bdtd-collapse-title">
+                                        <i class="iconfont icon-jiantouarrow487"></i>
+                                        显示代码
+                                    </div>
+                                    <div class="bdtd-collapse-content">
+                                        <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:18px;color:#545558">
+        提示：此样式使用span标签之间不能有空格，务必放置一行内
+        <div class="bdtd-page-rapid">
+            <span class="disabled">首页</span>
+            <span>上一页</span>
+            <span>1</span>
+            <span>2</span>
+            <span class="current">3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>下一页</span>
+            <span>尾页</span>
+        </div>
+    </xmp>
+</pre> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>简单样式</p>
+                            <div class="bdtd-page-num">
+                                <span class="disabled">首页</span>
+                                <span class="disabled">上一页</span>
+                                <span class="current">1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>下一页</span>
+                                <span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page-num  bdtd-page-num-green">
+                                <span class="disabled">首页</span>
+                                <span class="disabled">上一页</span>
+                                <span>1</span>
+                                <span class="current">2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>下一页</span>
+                                <span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page-num  bdtd-page-num-red">
+                                <span class="disabled">首页</span>
+                                <span class="disabled">上一页</span>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span class="current">4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>下一页</span>
+                                <span>尾页</span>
+                            </div></br>
+                            <div class="bdtd-page-num  bdtd-page-num-org">
+                                <span class="disabled">首页</span>
+                                <span class="disabled">上一页</span>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span class="current">6</span>
+                                <span>下一页</span>
+                                <span>尾页</span>
+                            </div>
+                            <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>组合</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>默认</td>
+                                        <td>class="bdtd-page-num"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>绿色</td>
+                                        <td> class="bdtd-page-num bdtd-page-num-green"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>红色</td>
+                                        <td>class="bdtd-page-num bdtd-page-num-red"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>橙色</td>
+                                        <td>class="bdtd-page-num bdtd-page-num-org"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:18px;color:#545558">
+        <div class="bdtd-page-num">
+            <span class="disabled">首页</span>
+            <span class="disabled">上一页</span>
+            <span class="current">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>下一页</span>
+            <span>尾页</span>
+        </div>
+    </xmp>
+</pre> 
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+     </div>
+   </div>
+   </div>
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

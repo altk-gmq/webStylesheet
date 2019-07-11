@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3美化单选按钮</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <style>
+        .wrapper{
+            padding: 10px 40px;
+        }
+        .wrap-title h3{
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .wrap-body-title{
+            margin-bottom: 8px;
+        }
+        .wrap-body-content{
+            border:1px solid #d0d7dd;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .wrap-body-content button{
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item{
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .wrap-body{
+            margin-bottom: 15px;
+        }
+        .bdtd-table-all{
+          margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <div class="wrap-content">
+            <div class="wrap-title">
+               <h3>radio单选/checkbox多选按钮</h3>
+            </div>
+            <div class="wrap-body">
+                <div class="wrap-body-item">
+                    <div class="wrap-body-title">
+                        单选示例及代码
+                        <div class="bdtd-alert alertInfo">
+                          <div class="bdtd-alert-content">
+                            <p class="bdtd-alert-title">用法:只需在input[type='radio']元素中添加类样式即可，默认蓝色样式，改变样式，只需加上相应的类名即可</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>单选radio无动画效果</p>
+                            <label class="bdtd-radios-label">
+                                <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">男</span>
+                            </label>
+                            <label class="bdtd-radios-label">
+                                <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">女</span>
+                            </label>
+                            <label class="bdtd-radios-label radio-green-style">
+                                <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">蔬菜</span>
+                            </label>
+                            <label class="bdtd-radios-label radio-green-style">
+                                <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">水果</span>
+                            </label>
+                            <table class="bdtd-table bdtd-table-all">
+                              <thead>
+                                  <tr>
+                                      <th>名称</th>
+                                      <th>组合</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>默认单选按钮</td>
+                                      <td>class="bdtd-radios-label"</td>
+                                  </tr>
+                                   <tr>
+                                      <td>绿色单选按钮</td>
+                                      <td>class="bdtd-radios-label radio-green-style"</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                            <div class="bdtd-collapse-box basemodel">
+                                <div class="bdtd-collapse-item">
+                                    <div class="bdtd-collapse-title">
+                                            <i class="iconfont icon-jiantouarrow487"></i>
+                                            显示代码
+                                    </div>
+                                    <div class="bdtd-collapse-content">
+  <pre>
+      <xmp style="font-size:20px;color:#545558;">
+          <label class="bdtd-radios-label">
+              <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">男</span>
+          </label>
+          <label class="bdtd-radios-label">
+              <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">女</span>
+          </label>
+          <label class="bdtd-radios-label radio-green-style">
+              <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">蔬菜</span>
+          </label>
+          <label class="bdtd-radios-label radio-green-style">
+              <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">水果</span>
+          </label>
+      </xmp>
+  </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="wrap-body-content-item">
+                            <p>单选radio有动画效果</p>
+                            <label class="bdtd-radios-label bdtd-radios-anim">
+                                <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">男</span>
+                            </label>
+                            <label class="bdtd-radios-label bdtd-radios-anim">
+                                <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">女</span>
+                            </label>
+                            <label class="bdtd-radios-label bdtd-radios-anim radio-green-style">
+                                <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">蔬菜</span>
+                            </label>
+                            <label class="bdtd-radios-label bdtd-radios-anim radio-green-style">
+                                <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">水果</span>
+                            </label>
+                            <table class="bdtd-table bdtd-table-all">
+                              <thead>
+                                  <tr>
+                                      <th>名称</th>
+                                      <th>组合</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>默认有动画效果单选按钮</td>
+                                      <td>class="bdtd-radios-label bdtd-radios-anim"</td>
+                                  </tr>
+                                   <tr>
+                                      <td>绿色有动画效果单选按钮</td>
+                                      <td>class="bdtd-radios-label bdtd-radios-anim radio-green-style"</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                            <div class="bdtd-collapse-box basemodel">
+                                <div class="bdtd-collapse-item">
+                                    <div class="bdtd-collapse-title">
+                                            <i class="iconfont icon-jiantouarrow487"></i>
+                                            显示代码
+                                    </div>
+                                    <div class="bdtd-collapse-content">
+  <pre>
+      <xmp style="font-size:20px;color:#545558;">
+          <label class="bdtd-radios-label bdtd-radios-anim">
+              <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">男</span>
+          </label>
+          <label class="bdtd-radios-label bdtd-radios-anim">
+              <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">女</span>
+          </label>
+          <label class="bdtd-radios-label bdtd-radios-anim radio-green-style">
+              <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">蔬菜</span>
+          </label>
+          <label class="bdtd-radios-label bdtd-radios-anim radio-green-style">
+              <input type="radio" name="sex"><i class="bdtd-radios"></i><span class="bdtd-radio-span">水果</span>
+          </label>
+      </xmp>
+  </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-body-content-item">
+                            <p>单选radio禁用</p>
+                            <label class="bdtd-radios-label bdtd-radios-disable">
+                                <input type="radio" name="sex" disabled="disabled"><i class="bdtd-radios"></i><span class="bdtd-radio-span">男</span>
+                            </label>
+                            <label class="bdtd-radios-label bdtd-radios-disable">
+                                <input type="radio" name="sex" disabled="disabled"><i class="bdtd-radios"></i><span class="bdtd-radio-span">女</span>
+                            </label>
+                             <table class="bdtd-table bdtd-table-all">
+                              <thead>
+                                  <tr>
+                                      <th>名称</th>
+                                      <th>组合</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>禁用单选按钮</td>
+                                      <td>class="bdtd-radios-label bdtd-radios-disable"</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                            <div class="bdtd-collapse-box basemodel">
+                                <div class="bdtd-collapse-item">
+                                    <div class="bdtd-collapse-title">
+                                            <i class="iconfont icon-jiantouarrow487"></i>
+                                            显示代码
+                                    </div>
+                                    <div class="bdtd-collapse-content">
+  <pre>
+      <xmp style="font-size:20px;color:#545558;">
+           <label class="bdtd-radios-label bdtd-radios-disable">
+              <input type="radio" name="sex" disabled="disabled"><i class="bdtd-radios"></i><span class="bdtd-radio-span">男</span>
+          </label>
+          <label class="bdtd-radios-label bdtd-radios-disable">
+              <input type="radio" name="sex" disabled="disabled"><i class="bdtd-radios"></i><span class="bdtd-radio-span">女</span>
+          </label>
+      </xmp>
+  </pre>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>          
+            <div class="wrap-body">
+                <div class="wrap-body-item">
+                    <div class="wrap-body-title">
+                       多选示例及代码
+                        <div class="bdtd-alert alertInfo">
+                          <div class="bdtd-alert-content">
+                            <p class="bdtd-alert-title">用法:只需在input[type='checkbox']元素中添加类样式即可，改变样式，只需加上相应的类名即可</p>
+                          </div>
+                        </div>
+                    <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>多选checkbox无动画效果</p>
+                            <label class="bdtd-checkbox-label">
+                                <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">男</span>
+                            </label>
+                            <label class="bdtd-checkbox-label">
+                                <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">女</span>
+                            </label>
+                             <label class="bdtd-checkbox-label checkbox-green-style">
+                                <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">蔬菜</span>
+                            </label>
+                            <label class="bdtd-checkbox-label checkbox-green-style">
+                                <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">水果</span>
+                            </label>
+                             <table class="bdtd-table bdtd-table-all">
+                              <thead>
+                                  <tr>
+                                      <th>名称</th>
+                                      <th>组合</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>默认多选按钮</td>
+                                      <td>class="bdtd-checkbox-label"</td>
+                                  </tr>
+                                   <tr>
+                                      <td>绿色多选按钮</td>
+                                      <td>class="bdtd-checkbox-label checkbox-green-style"</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                            <div class="bdtd-collapse-box basemodel">
+                            <div class="bdtd-collapse-item">
+                                <div class="bdtd-collapse-title">
+                                        <i class="iconfont icon-jiantouarrow487"></i>
+                                        显示代码
+                                </div>
+                                <div class="bdtd-collapse-content">
+  <pre>
+      <xmp style="font-size:20px;color:#545558;">
+          <label class="bdtd-checkbox-label ">
+              <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">男</span>
+          </label>
+          <label class="bdtd-checkbox-label">
+              <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">女</span>
+          </label>
+          <label class="bdtd-checkbox-label checkbox-green-style">
+              <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">男</span>
+          </label>
+          <label class="bdtd-checkbox-label checkbox-green-style">
+              <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">水果</span>
+          </label>
+      </xmp>
+  </pre>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <div class="wrap-body-content-item">
+                            <p>多选checkbox有动画效果</p>
+                            <label class="bdtd-checkbox-label bdtd-checkbox-anim">
+                                <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">男</span>
+                            </label>
+                            <label class="bdtd-checkbox-label bdtd-checkbox-anim">
+                                <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">女</span>
+                            </label>
+                            <label class="bdtd-checkbox-label bdtd-checkbox-anim checkbox-green-style">
+                                <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">蔬菜</span>
+                            </label>
+                            <label class="bdtd-checkbox-label bdtd-checkbox-anim  checkbox-green-style">
+                                <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">水果</span>
+                            </label>
+                            <table class="bdtd-table bdtd-table-all">
+                              <thead>
+                                  <tr>
+                                      <th>名称</th>
+                                      <th>组合</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>默认有动画效果多选按钮</td>
+                                      <td>class="bdtd-checkbox-label bdtd-checkbox-anim"</td>
+                                  </tr>
+                                   <tr>
+                                      <td>绿色有动画效果多选按钮</td>
+                                      <td>class="bdtd-checkbox-label bdtd-checkbox-anim checkbox-green-style"</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                            <div class="bdtd-collapse-box basemodel">
+                            <div class="bdtd-collapse-item">
+                                <div class="bdtd-collapse-title">
+                                        <i class="iconfont icon-jiantouarrow487"></i>
+                                        显示代码
+                                </div>
+                                <div class="bdtd-collapse-content">
+  <pre>
+      <xmp style="font-size:20px;color:#545558;">
+          <label class="bdtd-checkbox-label bdtd-checkbox-anim ">
+              <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">男</span>
+          </label>
+          <label class="bdtd-checkbox-label bdtd-checkbox-anim">
+              <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">女</span>
+          </label>
+          <label class="bdtd-checkbox-label bdtd-checkbox-anim checkbox-green-style">
+              <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">蔬菜</span>
+          </label>
+          <label class="bdtd-checkbox-label bdtd-checkbox-anim checkbox-green-style">
+              <input type="checkbox" name="sex"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">水果</span>
+          </label>
+      </xmp>
+  </pre>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <div class="wrap-body-content-item">
+                            <p>多选checkbox禁用</p>
+                            <label class="bdtd-checkbox-label bdtd-checkbox-disable">
+                                <input type="checkbox" name="sex" disabled="disabled"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">男</span>
+                            </label>
+                            <label class="bdtd-checkbox-label bdtd-checkbox-disable">
+                                <input type="checkbox" name="sex" disabled="disabled"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">女</span>
+                            </label>
+                            <table class="bdtd-table bdtd-table-all">
+                              <thead>
+                                  <tr>
+                                      <th>名称</th>
+                                      <th>组合</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>禁用多选按钮</td>
+                                      <td>class="bdtd-checkbox-label bdtd-checkbox-disable"</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                            <div class="bdtd-collapse-box basemodel">
+                            <div class="bdtd-collapse-item">
+                                <div class="bdtd-collapse-title">
+                                        <i class="iconfont icon-jiantouarrow487"></i>
+                                        显示代码
+                                </div>
+                                <div class="bdtd-collapse-content">
+  <pre>
+      <xmp style="font-size:20px;color:#545558;">
+          <label class="bdtd-checkbox-label bdtd-checkbox-disable">
+              <input type="checkbox" name="sex" disabled="disabled"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">男</span>
+          </label>
+          <label class="bdtd-checkbox-label bdtd-checkbox-disable">
+              <input type="checkbox" name="sex" disabled="disabled"><i class="bdtd-checkbox"></i><span class="bdtd-checkbox-span">女</span>
+          </label>
+      </xmp>
+  </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

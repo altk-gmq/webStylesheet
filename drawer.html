@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抽屉</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .drawer-left{
+        width: 260px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -260px;
+        height: 100%;
+        background: white;
+        transition: linear .3s
+        ;
+        z-index: 2;
+        background-clip: padding-box;
+        box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    }
+    .drawer-right{
+        width: 260px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -260px;
+        height: 100%;
+        background: white;
+        transition: linear .3s;
+        z-index: 2;
+        background-clip: padding-box;
+        box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    }
+    .mask{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #000000;
+        opacity: .5;
+        display: none;
+        transition: linear .3s
+    }
+    </style>
+</head>
+<body>
+    <button id="showDeawer">显示drawer</button>
+    <button id="showDeawer-r">显示drawer</button>
+    <div class="drawer-left" id="drawer-left"></div>
+    <div class="drawer-right" id="drawer-right"></div>
+    <div class="mask" id="mask"></div>
+    <script>
+        window.onload = function(){
+            //获得元素对象
+            function g(id){return document.getElementById(id)}
+            g("showDeawer").onclick = function(){
+                g("drawer-left").style.left = 0+"px";
+                g("mask").style.display = "block";
+            }
+            g("showDeawer-r").onclick = function(){
+                g("drawer-right").style.right = 0+"px";
+                g("mask").style.display = "block";
+            }
+            g("mask").onclick = function(){
+                g("drawer-left").style.left = -260+"px";
+                g("drawer-right").style.right = -260+"px";
+                g("mask").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

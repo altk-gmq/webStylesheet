@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv=“X-UA-Compatible” content=“IE=5; IE=8″/>
+	<title>消除内外边距</title>
+	<style type="text/css">
+		/*解决办法各个浏览器因为浏览器自身的内外边距引起的布局差异，解决办法就是*/
+		*{
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;  /*设置为基于父元素的一个百分比值*/
+			font: inherit;    /*从父元素继承字体尺寸。*/
+			font-weight: normal;
+			vertical-align: baseline;  /*一个元素的基线与其父元素的基线对齐*/
+		}
+		button{
+			overflow: visible;  /*去除button在低版本浏览器中的内容越多，左右间距越大*/
+		}
+		html, body{
+		    width: 100%;
+		    font-family: "Arial", "Microsoft YaHei", "SimHei", "SimSun", "微软雅黑", sans-serif;
+		}
+		.bdtd-input{
+			width: 180px;  /*默认宽*/
+			height: 30px;
+			line-height: 28px;   /*行高设置比高度低2px解决ie低版本兼容*/
+			color: #383f47;
+			font-size: 14px;
+			border: 1px #bfcbd9 solid;
+			box-sizing: border-box;  /*去掉在低版本ie中会造成文字在input不居中*/
+			padding-left: 10px; 
+			outline: none;
+			border-radius: 4px;  
+			transition: border-color .2s cubic-bezier(.645,.045,.355,1);letter-spacing: 1px;
+		}
+	</style>
+</head>
+<body style="background: #fff">
+	我是body，我的内外边距
+	<p>chrome:    margin:8px;</p>
+	<p>fireFox:   margin:8px</p>
+	<p>IE:        margin:15px 10px; offset:15px 10px;</p>
+	<div style="background:#666">
+		我是div，我的内外边距
+		<p>chrome:    No</p>
+		<p>fireFox:   No</p>
+		<p>IE7以下:   offset存在值但是不影响布局</p>
+	</div>
+	<br>
+	<p style="background: #fba">
+		我是p，我的内外边距
+		<p>chrome:    margin:16px 0;</p>
+		<p>fireFox:   margin:16px 0;</p>
+		<p>IE7以下:   offset存在值但是不影响布局</p>
+	</p>
+	<br>
+	<h1 style="background: #fbd">
+		我是H标签，我的内外边距
+		<p>chrome:    margin:21px 0;</p>
+		<p>fireFox:   margin:21px 0;</p>
+		<p>IE7以下:   offset存在值但是不影响布局</p>
+	</h1>
+	<br>
+	<ul>
+		<li>chrome:    margin:16px 0; padding:0 0 0 40px;</li>
+		<li>fireFox:   margin:21px 0;</li>
+		<li>IE7以下:   offset存在值但是不影响布局;0 0 0 30px;</li>
+	</ul>
+	<br>
+	<ol>
+		<li>chrome:    margin:16px 0; padding:0 0 0 40px;</li>
+		<li>fireFox:   margin:21px 0;</li>
+		<li>IE7以下:   offset存在值但是不影响布局;0 0 0 30px;</li>
+	</ol>
+	<br>
+    <img src="img/hml.jpg" width="80px"; height="40px"; border="1px solid #000" >
+	<br>
+    <table border="1" cellspacing="0" style="width: 400px">   <!-- table 行内添加border = "1"没效果,去掉border = 0;就可以 -->
+    	<thead>
+    		<tr>
+    			<th>1</th>
+    			<th>1</th>
+    			<th>3</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>4</td>
+    			<td>5</td>
+    			<td>6</td>
+    		</tr>
+    	</tbody>
+    	<tfoot>
+    		<tr>
+    			<td>7</td>
+    			<td>8</td>
+    			<td>9</td>
+    		</tr>
+    	</tfoot>
+    </table>
+    <br>
+    <button class="bdtd-btn">默认按钮</button>
+	<button class="bdtd-btn bdtd-btn-normal">百搭按钮</button>
+	<button class=" bdtd-btn  bdtd-btn-success">成功按钮</button>
+	<br>
+	<br>
+	<input class="bdtd-input" type="text" name="text" placeholder="请输入密码">
+	<br>
+	<br>
+</body>
+</html>

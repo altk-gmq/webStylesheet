@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ie浏览器兼容性问题</title>
+</head>
+<body>
+<h2>浏览器兼容性问题又被称为网页或网站兼容性问题；不同浏览器内核及所支持的html等网页语言标准不同，不同客户端环境（如分辨率不同）造成实际显示效果未能达到预期理想效果</h2>
+<p>首先我们来看一下目前市面上常见的一些浏览器：ie、chrome、firefox、safari、opera、maxthon、360、qq、yy、uc、sogou、2345、淘宝、猎豹、世界之窗等</p>
+<p>其中表现很出色的有chrome、firefox、safari等；而表现极差的就是ie6/7内核浏览器了，我们的兼容性工作大半都是围绕这两个浏览器内核展开</p>
+<p>我们的常规处理方式是调试各浏览器网页显示效果、使用成熟的前端开发框架、运用css与hack技巧等</p>
+<h2>常见hack技巧</h2>
+<p>css</p>
+<ul>
+	<li>_：ie6内核浏览器识别
+
+color:#333;_color:#999;</li>
+<li>
+	*：ie7及其以下内核浏览器识别
+
+color:#333;*color:#999;
+</li>
+<li>
+	\：如\9意为ie9及其以下内核浏览器识别
+
+color:#333;color:#999\9;
+</li>
+<li>
+	!important：多内核浏览器识别，作用为强制此属性值
+
+color:#333 !important;
+</li>
+<li>
+	这几个最常用的数量虽然不多，但是够用而且很管用；但是我们的遵循原则是能不用就不用
+</li>
+</ul>
+<p>html</p>
+<ul>
+	<li>ie内核浏览器识别
+
+<!--[if IE]><![endif]-->
+	
+</li>
+<li>
+ie6内核浏览器识别
+
+<!--[if IE 6]><![endif]-->
+</li>
+<li>
+ie7及其以上内核浏览器识别
+
+<!--[if gte IE 7]><![endif]-->
+</li>
+<li>
+ie7及其以下内核浏览器识别
+
+<!--[if lte IE 7]><![endif]-->
+</li>
+<li>
+	非ie内核浏览器识别
+
+<!--[if !IE]><![endif]-->
+</li>
+<li>
+非ie7及其以下内核浏览器识别
+
+<!--[if !(lte IE 7)]><!-->
+</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件名称</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <style>
+        .wrapper{
+            padding: 10px 40px;
+        }
+        .wrap-title h3{
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .wrap-body-title{
+            margin-bottom: 8px;
+        }
+        .wrap-body-content{
+            border:1px solid #d0d7dd;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .wrap-body-content button{
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item{
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item p{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+       /* .wrap-body-content-item p{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }*/
+          .wrap-body{
+            margin-bottom: 15px;
+        }
+        .bdtd-alert p{
+            margin-bottom: 0;
+        }
+         .bdtd-table-all{
+          margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+     <div class="wrapper">
+       <div class="wrap-content">
+           <div class="wrap-title">
+               <h3>alert提示框</h3>
+           </div>
+           <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       基础alert示例代码
+                       <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">引入类样式即可</p>
+                        </div>
+                      </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>基础样式</p>
+                              <div class="bdtd-alert alertInfo">
+                                  <div class="bdtd-alert-content">
+                                    <p class="bdtd-alert-title">消息提示的文案</p>
+                                  </div>
+                              </div>
+                              <div class="bdtd-alert alertSuccess">
+                                <div class="bdtd-alert-content">
+                                  <p class="bdtd-alert-title">成功提示的文案</p>
+                                </div>
+                              </div>
+                              <div class="bdtd-alert alertWarning">
+                                <div class="bdtd-alert-content">
+                                  <p class="bdtd-alert-title">警告提示的文案</p>
+                                </div>
+                              </div>
+                              <div class="bdtd-alert alertError">
+                                <div class="bdtd-alert-content"> 
+                                  <p class="bdtd-alert-title">错误提示的文案</p>
+                                </div> 
+                              </div>
+                             <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th><th>类名</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>基础alert</td><td>class="bdtd-alert"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>消息alert</td><td>class="bdtd-alert alertInfo"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>成功alert</td><td>class="bdtd-alert alertInfo"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>警告alert</td><td>class="bdtd-alert alertInfo"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>错误alert</td><td>class="bdtd-alert alertInfo"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-alert alertInfo">
+            <div class="bdtd-alert-content">
+              <p class="bdtd-alert-title">消息提示的文案</p>
+            </div>
+        </div>
+        <div class="bdtd-alert alertSuccess">
+          <div class="bdtd-alert-content">
+            <p class="bdtd-alert-title">成功提示的文案</p>
+          </div>
+        </div>
+        <div class="bdtd-alert alertWarning">
+          <div class="bdtd-alert-content">
+            <p class="bdtd-alert-title">警告提示的文案</p>
+          </div>
+        </div>
+        <div class="bdtd-alert alertError">
+          <div class="bdtd-alert-content"> 
+            <p class="bdtd-alert-title">错误提示的文案</p>
+          </div> 
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+                <div class="wrap-body">
+                  <div class="wrap-body-item">
+                         <div class="wrap-body-title">
+                        带关闭按钮alert示例代码
+                         <div class="bdtd-alert alertInfo">
+                              <p class="bdtd-alert-title">引入类样式即可</p>
+                        </div>
+                  </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>基础样式</p>
+                              <div class="bdtd-alert alertInfo">
+                                <div class="bdtd-alert-content">
+                                  <p class="bdtd-alert-title">消息提示的文案</p>
+                                  <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+                                </div>
+                                
+                                </div>
+                                <div class="bdtd-alert alertSuccess">
+                                  <div class="bdtd-alert-content">
+                                    <p class="bdtd-alert-title">成功提示的文案</p>
+                                    <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+                                  </div>
+                                    
+                                </div>
+                                <div class="bdtd-alert alertWarning">
+                                  <div class="bdtd-alert-content">
+                                    <p class="bdtd-alert-title">警告提示的文案</p>
+                                    <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+                                  </div>
+                                  
+                                </div>
+                                <div class="bdtd-alert alertError">
+                                  <div class="bdtd-alert-content"> 
+                                    <p class="bdtd-alert-title">错误提示的文案</p>
+                                    <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+                                  </div> 
+                                    
+                                </div>
+                             <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th><th>类名</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>基础alert</td><td>class="bdtd-alert"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>消息alert</td><td>class="bdtd-alert alertInfo"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>成功alert</td><td>class="bdtd-alert alertInfo"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>警告alert</td><td>class="bdtd-alert alertInfo"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>错误alert</td><td>class="bdtd-alert alertInfo"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-alert alertInfo">
+          <div class="bdtd-alert-content">
+            <p class="bdtd-alert-title">消息提示的文案</p>
+            <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+          </div> 
+        </div>
+        <div class="bdtd-alert alertSuccess">
+          <div class="bdtd-alert-content">
+            <p class="bdtd-alert-title">成功提示的文案</p>
+            <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+          </div>    
+        </div>
+        <div class="bdtd-alert alertWarning">
+          <div class="bdtd-alert-content">
+            <p class="bdtd-alert-title">警告提示的文案</p>
+            <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+          </div>   
+        </div>
+        <div class="bdtd-alert alertError">
+          <div class="bdtd-alert-content"> 
+            <p class="bdtd-alert-title">错误提示的文案</p>
+            <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+          </div>          
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+                           <div class="wrap-body">
+                  <div class="wrap-body-item">
+                         <div class="wrap-body-title">
+                        带图标/关闭按钮alert示例代码
+                         <div class="bdtd-alert alertInfo">
+                              <p class="bdtd-alert-title">引入类样式即可</p>
+                        </div>
+                  </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>基础样式</p>
+                              <div class="bdtd-alert alertInfo alert-icon">
+                                <span class="alertIcon">
+                                    <i class="iconfont icon-xinxi"></i>
+                                </span>
+                                <div class="bdtd-alert-content">
+                                  <p class="bdtd-alert-title">消息提示的文案</p>
+                                  <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+                                </div>
+                                
+                                </div>
+                                <div class="bdtd-alert alertSuccess alert-icon">
+                                  <span class="alertIcon">
+                                      <i class="iconfont icon-chenggong1"></i>
+                                  </span>
+                                  <div class="bdtd-alert-content">
+                                    <p class="bdtd-alert-title">成功提示的文案</p>
+                                    <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+                                  </div>
+                                    
+                                </div>
+                                <div class="bdtd-alert alertWarning alert-icon">
+                                  <span class="alertIcon">
+                                      <i class="iconfont icon-jinggao"></i>
+                                  </span>
+                                  <div class="bdtd-alert-content">
+                                    <p class="bdtd-alert-title">警告提示的文案</p>
+                                    <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+                                  </div>
+                                  
+                                </div>
+                                <div class="bdtd-alert alertError alert-icon">
+                                  <span class="alertIcon">
+                                      <i class="iconfont icon-chenggong"></i>
+                                  </span>
+                                  <div class="bdtd-alert-content"> 
+                                    <p class="bdtd-alert-title">错误提示的文案</p>
+                                    <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+                                  </div>     
+                                </div>
+                             <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th><th>类名</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>基础alert</td><td>class="bdtd-alert"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>消息alert</td><td>class="bdtd-alert alertInfo alert-icon"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>成功alert</td><td>class="bdtd-alert alertInfo alert-icon"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>警告alert</td><td>class="bdtd-alert alertInfo alert-icon"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>错误alert</td><td>class="bdtd-alert alertInfo alert-icon"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-alert alertInfo alert-icon">
+          <span class="alertIcon">
+              <i class="iconfont icon-xinxi"></i>
+          </span>
+          <div class="bdtd-alert-content">
+            <p class="bdtd-alert-title">消息提示的文案</p>
+            <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+          </div>
+        </div>
+        <div class="bdtd-alert alertSuccess alert-icon">
+          <span class="alertIcon">
+              <i class="iconfont icon-chenggong1"></i>
+          </span>
+          <div class="bdtd-alert-content">
+            <p class="bdtd-alert-title">成功提示的文案</p>
+            <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+          </div>
+        </div>
+        <div class="bdtd-alert alertWarning alert-icon">
+          <span class="alertIcon">
+              <i class="iconfont icon-jinggao"></i>
+          </span>
+          <div class="bdtd-alert-content">
+            <p class="bdtd-alert-title">警告提示的文案</p>
+            <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+          </div>
+          
+        </div>
+        <div class="bdtd-alert alertError alert-icon">
+          <span class="alertIcon">
+              <i class="iconfont icon-chenggong"></i>
+          </span>
+          <div class="bdtd-alert-content"> 
+            <p class="bdtd-alert-title">错误提示的文案</p>
+            <a class="closeAlert"><i class="iconfont icon-guanbi"></i></a>
+          </div>     
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+     </div>
+   </div>
+   </div>
+      <script src="js/jquery-3.3.1.min.js"></script>
+   <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.header{
+	height: 66px;
+    background: #ffffff;
+	position: relative;
+    z-index: 999;
+}
+.headerActive{
+	width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,.22);
+}
+.header .headerWrap{
+	margin: 0 100px 0 50px;
+}
+.header .headerLeft .bdtdTitle{
+	float: left;
+}
+.header .bdtdLogo{
+	height: 50px;
+	float: left;
+	vertical-align: middle;
+	margin-top: 8px;
+}
+.header .bdtdTitleName{
+	float: left;
+	margin-top: 18px;
+	font-size: 24px;
+	color: #575747;
+	font-weight: bold;
+	padding-left: 15px;
+}
+.headerRight .headerNavItem{
+	float: left;
+	padding: 0 20px;
+	height: 26px;
+    line-height: 26px;
+    margin:  0 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: -webkit-linear-gradient(left, #4071a2 , #457cbd); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #4071a2 , #457cbd); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #4071a2 , #457cbd); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #4071a2 , #457cbd); /* 标准的语法 */
+    border-radius: 6px;  
+    transition: 2s width,2s 1s height,3s 3s background;
+    -webkit-transform: skewX(-30deg);
+}
+.headerRight .headerNavItem a{	
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 10px;
+    display: inline-block;
+    color: #ffffff;
+    -webkit-transform: skewX(30deg); 
+}
+.headerRight .headerNavItem:hover{	 
+    background: -webkit-linear-gradient(left, #6e54a0 , #2d2d65); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #6e54a0 , #2d2d65); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #6e54a0 , #2d2d65); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #6e54a0 , #2d2d65); /* 标准的语法 */
+    box-shadow: 2px 2px 3px rgba(71, 62, 101, 0.8);
+    color: #ffffff;
+}
+
+
+/*主题内容*/
+.content{
+	overflow-y: auto;
+}
+
+
+
+/*信息展示*/
+
+.contentItem{
+	width: 100%;
+	height: 600px;
+}
+.serverShow{
+	background:  #c5b0b0;
+}
+.exampleShow{
+	background: #ad8181;
+}
+.kehuShow{
+	background: #523d3d;
+}
+.advantageShow{
+	background: #f9f9f9;
+}
+/*底部*/
+#footer{
+	background: #333333;
+}
+#footer .footerWrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+#footer .footerCopyright{
+	text-align: center;
+    line-height: 28px;
+    font-size: 12px;
+    padding: 24px 0;
+}
+#footer .footerCopyright a, p {
+    color: #999999;
+}

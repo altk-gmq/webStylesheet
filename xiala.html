@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉列表</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <style>
+        .wrapper{
+            padding: 10px 40px;
+        }
+        .wrap-title h3{
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .wrap-body-title{
+            margin-bottom: 8px;
+        }
+        .wrap-body-content{
+            border:1px solid #d0d7dd;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .wrap-body-content-item{
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item p{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+          .wrap-body{
+            margin-bottom: 15px;
+        }
+
+        .bdtd-select{
+            width: 100%;
+            height: 30px;
+            border-radius: 4px;
+            border: 1px #bfcbd9 solid;
+            outline: none;
+            padding-left: 10px;
+            color: #383f47;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+     <div class="wrapper">
+       <div class="wrap-content">
+           <div class="wrap-title">
+               <h3>input下拉列表</h3>
+           </div>
+           <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       示例代码
+                        <div class="bdtd-alert alertInfo">
+                          <div class="bdtd-alert-content">
+                            <p class="bdtd-alert-title">将完整代码复制粘贴，不允许修改组件类名</p>
+                          </div>
+                        </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>基础样式</p>
+                            <p>
+                                <div class="bdtd-selectbox">
+                                    <div class="bdtd-selectInput">
+                                        <input type="text" name="cityname" class="bdtd-input selectbtn" readonly="readonly" placeholder="请选择" value="">
+                                        <button class="iconfont icon-xiasanjiao1 input-edge"></button>
+                                    </div>
+                                    <ul class="bdtd-selectMenu">
+                                        <li bdtd-value="0" class="bdtd-menu-item">上海</li>
+                                        <li bdtd-value="1" class="bdtd-menu-item">北京</li>
+                                    </ul>
+                                </div>
+                            </p>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+  <pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-selectbox">
+          <div class="bdtd-selectInput">
+              <input type="text" name="cityname" class="bdtd-input selectbtn" readonly="readonly" placeholder="请选择" value="">
+              <button class="iconfont icon-xiasanjiao1 input-edge"></button>
+          </div>
+          <ul class="bdtd-selectMenu">
+              <li class="bdtd-menu-item">上海</li>
+              <li class="bdtd-menu-item">北京</li>
+              <li class="bdtd-menu-item">广州</li>
+              <li class="bdtd-menu-item">海南</li>
+          </ul>
+      </div>
+    </xmp>
+</pre>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+           <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       示例代码
+                       <div class="bdtd-alert alertInfo">
+                          <div class="bdtd-alert-content">
+                            <p class="bdtd-alert-title">将完整代码复制粘贴，不允许修改组件类名，在原基础上添加类"sizeBig"</p>
+                          </div>
+                        </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>下拉列表框高度为36px</p>
+                            <p>
+                              <div class="bdtd-selectbox bdtd-sizeBig">
+                                    <div class="bdtd-selectInput">
+                                        <input type="text" name="cityname" class="bdtd-input selectbtn" readonly="readonly" placeholder="请选择" value="">
+                                        <button class="iconfont icon-xiasanjiao1 input-edge"></button>
+                                    </div>
+                                    <ul class="bdtd-selectMenu">
+                                        <li class="bdtd-menu-item">北京</li>
+                                        <li class="bdtd-menu-item">上海</li>
+                                    </ul>
+                                </div>
+                              </p>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+  <pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-selectbox  bdtd-sizeBig">
+          <div class="bdtd-selectInput">
+              <input type="text" name="cityname" class="bdtd-input selectbtn" readonly="readonly" placeholder="请选择" value="">
+              <button class="iconfont icon-xiasanjiao1 input-edge"></button>
+          </div>
+          <ul class="bdtd-selectMenu">
+              <li class="bdtd-menu-item">上海</li>
+              <li class="bdtd-menu-item">北京</li>
+          </ul>
+      </div>
+    </xmp>
+</pre>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+
+                      <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       示例代码
+                       <div class="bdtd-alert alertInfo">
+                          <div class="bdtd-alert-content">
+                            <p class="bdtd-alert-title">将完整代码复制粘贴，不允许修改组件类名，在原基础上添加类"sizeBig"</p>
+                          </div>
+                        </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>下拉列表框高度为36px</p>
+                            <p>
+                              <select id="selectname" class="bdtd-select">
+                                <option value="0">上海</option>
+                                <option value="1">北京</option>
+                                <option value="2">海南</option>
+                              </select>
+                              </p>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+  <pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-selectbox  bdtd-sizeBig">
+          <div class="bdtd-selectInput">
+              <input type="text" name="cityname" class="bdtd-input selectbtn" readonly="readonly" placeholder="请选择" value="">
+              <button class="iconfont icon-xiasanjiao1 input-edge"></button>
+          </div>
+          <ul class="bdtd-selectMenu">
+              <li class="bdtd-menu-item">上海</li>
+              <li class="bdtd-menu-item">北京</li>
+          </ul>
+      </div>
+    </xmp>
+</pre>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+     </div>
+   </div>
+   </div>
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

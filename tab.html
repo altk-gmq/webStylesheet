@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件名称</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <style>
+        .wrapper{
+            padding: 10px 40px;
+        }
+        .wrap-title h3{
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .wrap-body-title{
+            margin-bottom: 8px;
+        }
+        .wrap-body-content{
+            border:1px solid #d0d7dd;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .wrap-body-content button{
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item{
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item p{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+          .wrap-body{
+            margin-bottom: 15px;
+        }
+
+        .bdtd-tab{
+          margin: 10px 0;
+        }
+        .bdtd-tab-title {
+          position: relative;
+          left: 0;
+          height: 36px;
+          white-space: nowrap;
+          font-size: 0;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          border-bottom-color: #d0d7dd;
+          transition: all .2s;
+          -webkit-transition: all .2s;
+      }
+      .bdtd-tab-title .tab-title-item {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 14px;
+          transition: all .2s;
+          -webkit-transition: all .2s;
+          position: relative;
+          line-height: 36px;
+          min-width: 65px;
+          padding: 0 15px;
+          text-align: center;
+          cursor: pointer;
+      }
+      .bdtd-tab-title .tab-title-item:hover{
+          color: #409eff;
+      }
+      .bdtd-tab-title .bdtd-this{
+        color: #409eff;
+      }
+      .bdtd-tab-title .bdtd-this:after {
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: '';
+          width: 100%;
+          height: 37px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: #d0d7dd;
+          border-bottom-color: #fff;
+          border-radius: 4px 4px 0 0;
+          box-sizing: border-box;
+          pointer-events: none;
+          /*box-shadow: -2px -2px 5px #888888,2px 0px 5px #888888;*/
+      }
+      .bdtd-tab-brief>.bdtd-tab-title .bdtd-this {
+          color: #409eff;
+      }
+      .bdtd-tab-brief>.bdtd-tab-title .bdtd-this:after{
+          border: none;
+          border-radius: none;
+          border-bottom: 2px solid #409eff;
+      }
+
+      .bdtd-tab-card {
+          border-width: 1px;
+          border-style: solid;
+          border-radius: 2px;
+          border-color: #d0d7dd;
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+      }
+      .bdtd-tab-card>.bdtd-tab-title {
+          background-color: #f2f2f2;
+      }
+      .bdtd-tab-card>.bdtd-tab-title .bdtd-this:after {
+          border-top: none;
+          border-width: 1px;
+          border-bottom-color: #fff;
+          border-radius: inherit;
+      }
+      .bdtd-tab-card>.bdtd-tab-title .tab-title-item {
+          margin-right: -1px;
+          margin-left: -1px;
+      }
+      .bdtd-tab-card>.bdtd-tab-title .bdtd-this{
+          background-color: #fff;
+          color: #409eff;
+      }
+      .bdtd-tab-content {
+          padding: 10px;
+      }
+      .tab-content-item {
+          display: none;
+      }
+      .bdtd-show {
+          display: block!important;
+      }
+    </style>
+</head>
+<body>
+     <div class="wrapper">
+       <div class="wrap-content">
+           <div class="wrap-title">
+               <h3>tab选项卡</h3>
+           </div>
+           <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                      默认tab示例及代码
+                       <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">将完整代码复制粘贴，不允许修改组件类名</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>基础样式</p>
+                            <div class="bdtd-tab">
+                              <ul class="bdtd-tab-title">
+                                <li class="tab-title-item bdtd-this">网站设置</li>
+                                <li class="tab-title-item">用户管理</li>
+                                <li class="tab-title-item">权限分配</li>
+                                <li class="tab-title-item">商品管理</li>
+                                <li class="tab-title-item">订单管理</li>
+                              </ul>
+                              <div class="bdtd-tab-content">
+                                <div class="tab-content-item bdtd-show">内容1</div>
+                                <div class="tab-content-item">内容2</div>
+                                <div class="tab-content-item">内容3</div>
+                                <div class="tab-content-item">内容4</div>
+                                <div class="tab-content-item">内容5</div>
+                              </div>
+                            </div>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-tab">
+          <ul class="bdtd-tab-title">
+            <li class="tab-title-item bdtd-this">网站设置</li>
+            <li class="tab-title-item">用户管理</li>
+            <li class="tab-title-item">权限分配</li>
+            <li class="tab-title-item">商品管理</li>
+            <li class="tab-title-item">订单管理</li>
+          </ul>
+          <div class="bdtd-tab-content">
+            <div class="tab-content-item bdtd-show">内容1</div>
+            <div class="tab-content-item">内容2</div>
+            <div class="tab-content-item">内容3</div>
+            <div class="tab-content-item">内容4</div>
+            <div class="tab-content-item">内容5</div>
+          </div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+                      <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                      简洁tab示例及代码
+                       <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">将完整代码复制粘贴，不允许修改组件类名</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>基础样式</p>
+                            <div class="bdtd-tab bdtd-tab-brief">
+                              <ul class="bdtd-tab-title">
+                                <li class="tab-title-item bdtd-this">网站设置</li>
+                                <li class="tab-title-item">用户管理</li>
+                                <li class="tab-title-item">权限分配</li>
+                                <li class="tab-title-item">商品管理</li>
+                                <li class="tab-title-item">订单管理</li>
+                              </ul>
+                              <div class="bdtd-tab-content">
+                                <div class="tab-content-item bdtd-show">内容1</div>
+                                <div class="tab-content-item">内容2</div>
+                                <div class="tab-content-item">内容3</div>
+                                <div class="tab-content-item">内容4</div>
+                                <div class="tab-content-item">内容5</div>
+                              </div>
+                            </div>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-tab bdtd-tab-brief">
+          <ul class="bdtd-tab-title">
+            <li class="tab-title-item bdtd-this">网站设置</li>
+            <li class="tab-title-item">用户管理</li>
+            <li class="tab-title-item">权限分配</li>
+            <li class="tab-title-item">商品管理</li>
+            <li class="tab-title-item">订单管理</li>
+          </ul>
+          <div class="bdtd-tab-content">
+            <div class="tab-content-item bdtd-show">内容1</div>
+            <div class="tab-content-item">内容2</div>
+            <div class="tab-content-item">内容3</div>
+            <div class="tab-content-item">内容4</div>
+            <div class="tab-content-item">内容5</div>
+          </div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+                                 <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                      tab卡片风格示例及代码
+                       <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">将完整代码复制粘贴，不允许修改组件类名</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>基础样式</p>
+                            <div class="bdtd-tab bdtd-tab-card">
+                              <ul class="bdtd-tab-title">
+                                <li class="tab-title-item bdtd-this">网站设置</li>
+                                <li class="tab-title-item">用户管理</li>
+                                <li class="tab-title-item">权限分配</li>
+                                <li class="tab-title-item">商品管理</li>
+                                <li class="tab-title-item">订单管理</li>
+                              </ul>
+                              <div class="bdtd-tab-content">
+                                <div class="tab-content-item bdtd-show">内容1</div>
+                                <div class="tab-content-item">内容2</div>
+                                <div class="tab-content-item">内容3</div>
+                                <div class="tab-content-item">内容4</div>
+                                <div class="tab-content-item">内容5</div>
+                              </div>
+                            </div>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-tab bdtd-tab-brief">
+          <ul class="bdtd-tab-title">
+            <li class="tab-title-item bdtd-this">网站设置</li>
+            <li class="tab-title-item">用户管理</li>
+            <li class="tab-title-item">权限分配</li>
+            <li class="tab-title-item">商品管理</li>
+            <li class="tab-title-item">订单管理</li>
+          </ul>
+          <div class="bdtd-tab-content">
+            <div class="tab-content-item bdtd-show">内容1</div>
+            <div class="tab-content-item">内容2</div>
+            <div class="tab-content-item">内容3</div>
+            <div class="tab-content-item">内容4</div>
+            <div class="tab-content-item">内容5</div>
+          </div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+     </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

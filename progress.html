@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进度条</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <style>
+        .wrapper{
+            padding: 10px 40px;
+        }
+        .wrap-title h3{
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        .wrap-body-title{
+            margin-bottom: 8px;
+        }
+        .wrap-body-content{
+            border:1px solid #d0d7dd;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .wrap-body-content-item{
+            margin-bottom: 15px;
+        }
+        .wrap-body-content-item p{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+          .wrap-body{
+            margin-bottom: 15px;
+        }
+         .bdtd-table-all{
+          margin-top: 15px;
+        }
+        .bdtd-progress {
+          position: relative;
+          height: 6px;
+          border-radius: 20px;
+          background-color: #e2e2e2;
+        }
+        .bdtd-progress-bar {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0;
+          max-width: 100%;
+          height: 6px;
+          border-radius: 20px;
+          text-align: right;
+          background-color: #5FB878;
+          transition: all .3s;
+          -webkit-transition: all .3s;
+        }
+        .bdtd-progress  .bdtd-bg-orange {
+          background-color:  #ffb800;
+        }
+        .bdtd-progress  .bdtd-bg-blue {
+          background-color:  #1E9FFF;
+        }
+        .bdtd-progress-text {
+          position: relative;
+          top: -20px;
+          line-height: 18px;
+          font-size: 12px;
+          color: #666;
+        }
+        .bdtd-progress-big, .bdtd-progress-big .bdtd-progress-bar {
+          height: 18px;
+          line-height: 18px;
+        }
+
+       .OpacityPop {
+          background: #FFFFFF;
+          border: 1px solid #B1B1B1;
+          overflow: hidden;
+          /*position: absolute;*/
+          z-index: 1000;
+          /*display: none;*/
+          border: 1px solid #d0d7dd;
+          border-radius: 8px;
+          background: #f3f6fb;
+          width: 348px;
+          height: 35px;
+          line-height: 35px;
+          padding: 0 8px;
+          box-shadow: 1px 1px 2px #333333;
+        }
+    /*range样式*/
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 200px;
+        height: 15px;
+        border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+        outline: none;
+        background: -webkit-linear-gradient(#7badbb, #1E9FFF) no-repeat;
+        background-size:0% 100%;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+    } 
+    /*以上为消除原有样式*/
+    input[type=range]::-webkit-slider-runnable-track {     /*谷歌chrome*/
+        height: 15px;
+        border-radius: 10px; /*将轨道设为圆角的*/
+        box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+    }
+    input[type=range]::-moz-range-track {        /*火狐firefox*/
+        height: 15px;
+        border-radius: 10px; /*将轨道设为圆角的*/
+        box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+    }
+    /*以上为轨道track样式*/
+    input[type=range]::-webkit-slider-thumb {    /*谷歌chrome*/
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        margin-top: -3px; /*使滑块超出轨道部分的偏移量相等*/
+        background: #ffffff; 
+        border-radius: 50%; /*外观设置为圆形*/
+        border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+        box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+    }
+    input[type=range]::-moz-range-thumb {      /*火狐firefox*/
+        -webkit-appearance: none;
+        height: 15px;
+        width: 15px;
+        margin-top: -5px; 使滑块超出轨道部分的偏移量相等
+        background: #ffffff; 
+        border-radius: 50%; /*外观设置为圆形*/
+        border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+        box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+    }
+     
+    /*以上设置填充颜色*/
+
+    /*ie浏览器设置样式*/
+    input[type=range]::-ms-track {
+    height: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+    border-color: transparent; /*去除原有边框*/
+    color: transparent; 去除轨道内的竖线
+}
+input[type=range]::-ms-thumb {
+    -ms-appearance: none;
+    border: solid 0.125em rgba(205, 224, 230, 0.5);
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-top: -2px;
+    box-shadow: 0 .125em .125em #3b4547;
+}
+
+input[type=range]::-ms-fill-lower {
+    /*进度条已填充的部分*/  
+    height: 12px;
+    border-radius: 10px;
+    background: linear-gradient(#7badbb, #1E9FFF) no-repeat;
+}
+
+input[type=range]::-ms-fill-upper {
+    /*进度条未填充的部分*/
+    height: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: linear-gradient(#7badbb, #1E9FFF) no-repeat;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #ffffff;
+}
+.bdtd-slider-runway{
+  height: 18px;
+  line-height: 18px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+  position: relative;
+}
+.bdtd-slider-bar{
+    height: 18px;
+    background-color: #409eff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+}
+.bdtd-slider-runway .bdtd-slider-btn{
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    transition: all 0.3s ease 0s;
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+    </style>
+</head>
+<body>
+     <div class="wrapper">
+       <div class="wrap-content">
+           <div class="wrap-title">
+               <h3>progress进度条</h3>
+           </div>
+           <div class="wrap-body">
+                <div class="wrap-body-item">
+                       <div class="wrap-body-title">
+                       常规用法示例代码
+                       <div class="bdtd-alert alertInfo">
+                        <div class="bdtd-alert-content">
+                          <p class="bdtd-alert-title">进度条可应用于许多业务场景，如任务完成进度、loading等等，是一种较为直观的表达元素。</p>
+                        </div>
+                    </div>
+                </div>
+                   <div class="wrap-body-content">
+                        <div class="wrap-body-content-item">
+                            <p>基础样式</p>
+                            <div class="bdtd-progress">
+                              <div class="bdtd-progress-bar"style="width: 20%;"></div>
+                            </div>
+                            <br>
+                            <div class="bdtd-progress">
+                              <div class="bdtd-progress-bar bdtd-bg-orange"style="width: 50%;">
+                                <span class="bdtd-progress-text">50%</span>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="bdtd-progress bdtd-progress-big">
+                              <div class="bdtd-progress-bar bdtd-bg-blue"style="width: 30%;">
+                                <span class="bdtd-progress-text">30%</span>
+                              </div>
+                            </div>
+                             <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th><th>类名</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>默认进度条</td><td>class="bdtd-progress"</td>
+                                    </tr>
+                                     <tr>
+                                        <td>大号进度条</td><td>class="bdtd-progress bdtd-progress-big"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <div class="bdtd-progress">
+          <div class="bdtd-progress-bar"style="width: 20%;"></div>
+        </div>
+        <br>
+        <div class="bdtd-progress">
+          <div class="bdtd-progress-bar bdtd-bg-orange"style="width: 50%;">
+            <span class="bdtd-progress-text">50%</span>
+          </div>
+        </div>
+        <br>
+        <div class="bdtd-progress bdtd-progress-big">
+          <div class="bdtd-progress-bar bdtd-bg-blue"style="width: 30%;">
+            <span class="bdtd-progress-text">30%</span>
+          </div>
+        </div>
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                              <div class="wrap-body-content-item">
+                            <p>可拖动进度条</p>                           
+                                <input type="range" min="0" max="100" value="0" id="lindi" name="lindi" oninput="changeSpeed()">
+                            <br>
+                             <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th><th>组合</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>input滑块</td><td>oninput="changeSpeed()"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <input type="range" min="0" max="100" value="0" id="lindi" name="lindi" oninput="changeSpeed()">
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                          <div class="wrap-body-content-item">
+                            <p>自定义可拖动进度条</p>                           
+                                <div class="bdtd-slider-runway">
+                                  <div class="bdtd-slider-bar"></div>
+                                  <button class="bdtd-slider-btn"></button>
+                                </div>
+                            <br>
+                             <table class="bdtd-table bdtd-table-all">
+                                <thead>
+                                    <tr>
+                                        <th>名称</th><th>组合</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>input滑块</td><td>oninput="changeSpeed()"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bdtd-collapse-box basemodel">
+                              <div class="bdtd-collapse-item">
+                                  <div class="bdtd-collapse-title">
+                                          <i class="iconfont icon-jiantouarrow487"></i>
+                                          显示代码
+                                  </div>
+                                  <div class="bdtd-collapse-content">
+                                      <div class="bdtd-collapse-content-box">
+<pre>
+    <xmp style="font-size:20px;color:#545558;">
+        <input type="range" min="0" max="100" value="0" id="caodi" name="caodi" oninput="changeSpeed()">
+    </xmp>
+</pre>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+     </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript">
+        function g(id){return document.getElementById(id);}
+         function sliderprogress(el){
+           var fdsd = el.value;
+           var ksh = fdsd +"% 100%";
+           el.style.backgroundSize = ksh;
+        }
+        function changeSpeed(){
+          sliderprogress(g("lindi"));
+        }
+  </script>
+  <script type="text/javascript">
+    $(function(){
+      $(".bdtd-slider-btn").mousedown(function(){
+        $(this).mousemove(function(e){
+          var x = e.pageX;
+
+          $(this).css('left',x+'px');
+        })
+
+        // alert("我点击了");
+        // if($(this).focus()){
+        //   alert("我获取焦点了")
+        // }
+        // if($(this).blur()){
+        //   alert("我失去焦点了")
+        // } 
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>width等比百分比值有误</title>
+</head>
+<body>
+<div>
+	<div style="width: 25%; height: 100px; background: #660; float: left;">1</div>
+	<div style="width: 25%; height: 100px; background: #660; float: left;">2</div>
+	<div style="width: 25%; height: 100px; background: #660; float: left;">3</div>
+	<div style="width: 25%; height: 100px; background: #660; float: left;">4</div>
+</div>
+<p>页面上表现是该元素和其它同类相比不正常，因为浏览器处理该问题时不够智能；为td插入一个不可见的空格占位符即可</p>
+<p><td>&nbsp;</td></p>
+</body>
+</html>
